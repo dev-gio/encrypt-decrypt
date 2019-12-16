@@ -1,7 +1,7 @@
 const key = CryptoJS.enc.Utf8.parse("93wj660t8fok9jws");
 const iv = CryptoJS.enc.Utf8.parse("r0yy7e67p49ee4d7");
 
-const encryptInput = document.getElementById('encrypt');
+const encryptInput = document.querySelector('#encrypt');
 const decryptInput = document.querySelector('#decrypt');
 
 const encrypt = (plainText) => {
@@ -28,19 +28,19 @@ const textAreaAdjust = (o) => {
     o.style.height = (25 + o.scrollHeight) + "px";
 }
 
-document.addEventListener("DOMContentLoaded", function (event) {
+document.addEventListener("DOMContentLoaded", () => {
     // Input fields auto adjust
     encryptInput.addEventListener('input', () => textAreaAdjust(encryptInput));
     decryptInput.addEventListener('input', () => textAreaAdjust(decryptInput));
 
-    // Encrypt
+    // Encrypt click event
     document.getElementById("goEncrypt").addEventListener('click', () => {
         let result = document.getElementById('encryptResult');
         result.value = encrypt(encryptInput.value);
         textAreaAdjust(result);
     });
 
-    // Decrypt
+    // Decrypt click event
     document.getElementById("goDecrypt").addEventListener('click', () => {
         let result = document.getElementById('result');
         result.value = decrypt(decryptInput.value);
