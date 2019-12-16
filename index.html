@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-color">
+    <div class="main-container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="labels">Encrypt</h1>
+            </div>
+            <div class="col-9 input-value padding-attr-left"><textarea placeholder="Enter characters to encrypt"
+                    id="encrypt" class="textarea-encrypt"></textarea></div>
+            <div class="col-3 btn-go padding-attr-right"><button class="btn btn-primary goEncrypt btn-font"
+                    type="button" id="goEncrypt">Go</button></div>
+            <div class="col-12">
+                <h6 class="labels">Encrypted Result</h6>
+            </div>
+            <div class="col-12 result-area padding-attr"><textarea id="encryptResult"></textarea></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h1 class="labels">Decrypt</h1>
+            </div>
+            <div class="col-9 input-value padding-attr-left"><textarea placeholder="Enter characters to decrypt"
+                    id="decrypt" class="textarea-encrypt"></textarea></div>
+            <div class="col-3 btn-go padding-attr-right"><button class="btn btn-primary goEncrypt btn-font"
+                    type="button" id="goDecrypt">Go</button></div>
+            <div class="col-12">
+                <h6 class="labels">Decrypted Result</h6>
+            </div>
+            <div class="col-12 result-area"><textarea id="result"></textarea></div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/core-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/cipher-core-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/aes-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/components/enc-base64-min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
